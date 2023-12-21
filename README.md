@@ -20,3 +20,9 @@ Sunuma erişmek için [tıkla](https://www.canva.com/design/DAF16LJzUBs/umWNSsiP
 2. Dart ve Flutter'ı yükleyin.
 3. Proje dizinine gidin ve bağımlılıkları yükleyin: `flutter pub get`
 4. Uygulamayı çalıştırın: `flutter run`
+
+
+Keystore oluşturmak için: `keytool -genkey -v -keystore C:\Users\akifk\Desktop\flutter_workshop\upload-keystore.jks -storetype JKS -keyalg RSA -keysize 2048 -validity 10000 -alias upload`
+
+bundle oluşturmak için `flutter build appbundle`
+apk oluşturmak için `flutter build apk`
