@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_workshop/view/home/view.dart';
+import 'package:flutter_workshop/view/home/view_example.dart';
 import 'package:get_storage/get_storage.dart';
 
 void main() async {
@@ -15,10 +15,10 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Color.fromARGB(255, 4, 43, 89)),
         useMaterial3: true,
       ),
-      home: const HomeView(),
+      home: const HomeViewExample(),
     );
   }
 }

@@ -6,9 +6,9 @@ import 'package:get/get.dart';
 
 addItem() {
   HomeViewController viewController = Get.put(HomeViewController());
-  ListElement item = ListElement(task: "description" + viewController.model.value.list.length.toString());
+  ListElement item = ListElement(task: viewController.textFieldController.value.text);
   StorageManager.instance.addItemToList(item);
-
+  viewController.textFieldController.value.clear();
   viewController.model.value.list.add(item);
   viewController.model.refresh();
   viewController.listKey.value.currentState?.insertItem(

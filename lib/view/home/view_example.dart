@@ -21,26 +21,48 @@ class _HomeViewExampleState extends State<HomeViewExample> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Obx(() {
-        return AnimatedList(
-          physics: const BouncingScrollPhysics(),
-          key: viewController.listKey.value,
-          initialItemCount: viewController.model.value.list.length,
-          itemBuilder: (context, index, animation) => SizeTransition(
-            sizeFactor: animation,
-            child: ListTile(
-              trailing: IconButton(
-                icon: const Icon(Icons.delete),
-                onPressed: () => deleteItem(index),
+      body: Obx(
+        () {
+          return Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: TextField(
+                  controller: viewController.textFieldController.value,
+                  decoration: const InputDecoration(
+                    hintStyle: TextStyle(),
+                    border: OutlineInputBorder(),
+                    hintText: "Buraya görev ekle",
+                    suffixIcon: Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: IconButton(
+                        icon: Icon(Icons.add),
+                        onPressed: addItem,
+                      ),
+                    ),
+                  ),
+                ),
               ),
-              subtitle: Text(viewController.model.value.list[index].task),
-            ),
-          ),
-        );
-      }),
-      floatingActionButton: const FloatingActionButton(
-        onPressed: addItem,
-        child: Icon(Icons.add),
+              Expanded(
+                child: AnimatedList(
+                  physics: const BouncingScrollPhysics(),
+                  key: viewController.listKey.value,
+                  initialItemCount: viewController.model.value.list.length,
+                  itemBuilder: (context, index, animation) => SizeTransition(
+                    sizeFactor: animation,
+                    child: ListTile(
+                      trailing: IconButton(
+                        icon: const Icon(Icons.delete),
+                        onPressed: () => deleteItem(index),
+                      ),
+                      subtitle: Text(viewController.model.value.list[index].task),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          );
+        },
       ),
     );
   }
