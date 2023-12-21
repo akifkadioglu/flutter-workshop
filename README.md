@@ -7,11 +7,13 @@ Flutter sunumunu için oluşturduğum ve basit bir to-do app yapacağım için a
 1. Flutter Nedir ve Neden Kullanılır?
 2. Dart Programlama Dili
 3. Widget Kavramı
-4. Bir projeye nereden başlanır
-5. UI Tasarımı ve Layouts
-6. State ve State Management
-7. Paket Kullanımı
+4. UI Tasarımı ve Layouts
+5. State ve State Management
+6. Paket Kullanımı
 
+Sunuma erişmek için [tıkla](https://www.canva.com/design/DAF16LJzUBs/umWNSsiP0Gz5E7BW9iCuKQ/edit)
+
+   
 ## Nasıl Başlanır
 
 1. Repoyu bilgisayarınıza kopyalayın.
